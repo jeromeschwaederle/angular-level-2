@@ -1,0 +1,19 @@
+<div class="snack-job-container">
+
+  <div class="snack-job-img-txt">
+    <img ngSrc="{{job.companyLogo}}" alt="logo of {{job.companyName}}" width="60" height="60">
+
+    <div class="snack-job-text-container">
+      <p class="snack-job-title">{{job.title}}</p>
+      <div class="snack-job-text">
+        <p>{{job.companyName}}</p>
+        <p>Reference: {{job.reference}}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="snack-job-icon">
+    <span class="icon-star" id="star-{{job.id}}"></span>
+  </div>
+
+</div>

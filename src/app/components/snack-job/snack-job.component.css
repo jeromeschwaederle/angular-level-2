@@ -1,0 +1,43 @@
+.snack-job-container {
+  display: flex;
+  justify-content: space-between;
+  background-color: #737373;
+}
+
+.snack-job-img-txt {
+  display: flex;
+}
+
+.snack-job-text-container {
+  margin-left: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.snack-job-title {
+  font-size: large;
+  font-weight: 700;
+}
+
+.snack-job-text {
+  display: flex;
+  gap: 50px;
+  font-size: small;
+}
+
+img {
+  max-height: 60px;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.snack-job-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+}
