@@ -3,7 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { HttpClientModule } from "@angular/common/http";
 import { NgForOf, NgIf } from "@angular/common";
 import { SnackJobComponent } from "./components/snack-job/snack-job.component";
-import { NavbarComponent } from "./components/navbar/navbar.component";
+import { NavbarComponent } from "./components/navbar.component";
 
 @Component({
   selector: 'app-root',

@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForOf } from "@angular/common";
-import { SnackJobComponent } from "../snack-job/snack-job.component";
-import { Job } from "../../models/job";
-import { JobDataService } from "../../../services/job-data.service";
+import { SnackJobComponent } from "./snack-job/snack-job.component";
+import { Job } from "../models/job";
+import { JobDataService } from "../../services/job-data.service";
 
 @Component({
   selector: 'app-list-all-jobs',
