@@ -20,9 +20,13 @@ import { FavoritesManagerService } from "../services/favorites-manager.service";
         <app-snack-job [job]="job"/>
       </ng-container>
     </ng-container>
+
     <ng-container *ngIf="currentUrl === favoritesUrl">
+      <ng-container *ngIf="theyAreNoFavorite()">
+        <p style="text-align: center">No job marked as favorite yet.</p>
+      </ng-container>
       <ng-container *ngFor="let job of jobs">
-        <ng-container *ngIf="favoriteJobIds.includes(job.id)" >
+        <ng-container *ngIf="isMarkedAsFavorite(job)" >
             <app-snack-job [job]="job" [showStar]="false"/>
         </ng-container>
       </ng-container>
@@ -60,6 +64,14 @@ export class ListJobsComponent implements OnInit {
     this.currentUrl = this.router.url;
 
     this.favoriteJobIds = this.favoritesManagerService.getAllFavorites();
+  }
+
+  protected theyAreNoFavorite(): boolean {
+    return !this.jobs.some(this.isMarkedAsFavorite.bind(this));
+  }
+
+  protected isMarkedAsFavorite(job: Job): boolean {
+    return this.favoriteJobIds.includes(job.id);
   }
 
 }
