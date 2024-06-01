@@ -32,4 +32,13 @@ export class FavoritesManagerService {
     }
   }
 
+  getAllFavorites(): number[] {
+    const favoritesInLocalStorage = localStorage.getItem(LocalStorageKeys.Favorites);
+    if (favoritesInLocalStorage === null) {
+      return [];
+    } else {
+      return JSON.parse(favoritesInLocalStorage)
+    }
+  }
+
 }

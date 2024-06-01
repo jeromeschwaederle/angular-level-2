@@ -1,13 +1,14 @@
 import { Component, Input } from '@angular/core';
 import { Job } from "../../models/job";
-import { NgOptimizedImage } from "@angular/common";
+import { NgIf, NgOptimizedImage } from "@angular/common";
 import { FavoritesManagerService } from "../../services/favorites-manager.service";
 
 @Component({
   selector: 'app-snack-job',
   standalone: true,
   imports: [
-    NgOptimizedImage
+    NgOptimizedImage,
+    NgIf
   ],
   templateUrl: './snack-job.component.html',
   styleUrl: './snack-job.component.css'
@@ -15,6 +16,7 @@ import { FavoritesManagerService } from "../../services/favorites-manager.servic
 export class SnackJobComponent {
 
   @Input() job!: Job;
+  @Input() showStar: boolean = true;
 
   constructor(protected favoritesManagerService: FavoritesManagerService) { }
 
