@@ -22,3 +22,7 @@ a {
 a:hover {
   cursor: pointer;
 }
+
+.active {
+  background-color: #222;
+}
