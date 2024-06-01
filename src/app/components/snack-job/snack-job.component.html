@@ -12,8 +12,8 @@
     </div>
   </div>
 
-  <div class="snack-job-icon">
-    <span class="icon-star" id="star-{{job.id}}"></span>
+  <div class="snack-job-icon" (click)="addToFavorites(job.id)">
+    <span class="icon-star active" id="star-{{job.id}}"></span>
   </div>
 
 </div>
