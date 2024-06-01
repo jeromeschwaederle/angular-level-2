@@ -1,4 +1,4 @@
-import { Component, ElementRef, Input, ViewChildren } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Job } from "../../models/job";
 import { NgOptimizedImage } from "@angular/common";
 import { LocalStorageKeys } from "../../utils/local-storage.enum";

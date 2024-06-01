@@ -1,0 +1,24 @@
+ul {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  width: 50%;
+  text-align: center;
+  background-color: #555555;
+}
+
+a {
+  margin: 0;
+  padding: 20px;
+  width: 100%;
+  color: white !important;
+}
+
+a:hover {
+  cursor: pointer;
+}
