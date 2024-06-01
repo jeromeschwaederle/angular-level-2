@@ -12,8 +12,12 @@
     </div>
   </div>
 
-  <div class="snack-job-icon" (click)="addToFavorites(job.id)">
-    <span class="icon-star active" id="star-{{job.id}}"></span>
+  <div
+    *ngIf="showStar"
+    [class]="isInFavorite(job.id) ? 'snack-job-icon active' : 'snack-job-icon'"
+    (click)="toggleFavorites(job.id)"
+  >
+    <span class="icon-star" id="star-{{job.id}}"></span>
   </div>
 
 </div>
