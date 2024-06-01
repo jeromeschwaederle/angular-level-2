@@ -7,7 +7,7 @@ import { Router } from "@angular/router";
 import { FavoritesManagerService } from "../services/favorites-manager.service";
 
 @Component({
-  selector: 'app-list-all-jobs',
+  selector: 'app-list-jobs',
   standalone: true,
   imports: [
     SnackJobComponent,
@@ -37,7 +37,7 @@ import { FavoritesManagerService } from "../services/favorites-manager.service";
     }
   `
 })
-export class ListAllJobsComponent implements OnInit {
+export class ListJobsComponent implements OnInit {
 
   currentUrl = '' ;
   allJobsUrl = '/jobs'
