@@ -2,13 +2,15 @@ import { Component, Input } from '@angular/core';
 import { Job } from "../../models/job";
 import { NgIf, NgOptimizedImage } from "@angular/common";
 import { FavoritesManagerService } from "../../services/favorites-manager.service";
+import { RouterLink } from "@angular/router";
 
 @Component({
   selector: 'app-snack-job',
   standalone: true,
   imports: [
     NgOptimizedImage,
-    NgIf
+    NgIf,
+    RouterLink
   ],
   templateUrl: './snack-job.component.html',
   styleUrl: './snack-job.component.css'

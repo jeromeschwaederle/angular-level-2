@@ -15,29 +15,33 @@ import { FavoritesManagerService } from "../services/favorites-manager.service";
     NgForOf
   ],
   template: `
-    <ng-container *ngIf="currentUrl === allJobsUrl">
-      <ng-container *ngFor="let job of jobs">
-        <app-snack-job [job]="job"/>
-      </ng-container>
-    </ng-container>
-
-    <ng-container *ngIf="currentUrl === favoritesUrl">
-      <ng-container *ngIf="theyAreNoFavorite()">
-        <p style="text-align: center">No job marked as favorite yet.</p>
-      </ng-container>
-      <ng-container *ngFor="let job of jobs">
-        <ng-container *ngIf="isMarkedAsFavorite(job)" >
-            <app-snack-job [job]="job" [showStar]="false"/>
+    <div class="container">
+      <ng-container *ngIf="currentUrl === allJobsUrl">
+        <ng-container *ngFor="let job of jobs">
+          <app-snack-job [job]="job"/>
         </ng-container>
       </ng-container>
-    </ng-container>
+
+      <ng-container *ngIf="currentUrl === favoritesUrl">
+        <ng-container *ngIf="theyAreNoFavorite()">
+          <p style="text-align: center">No job marked as favorite yet.</p>
+        </ng-container>
+        <ng-container *ngFor="let job of jobs">
+          <ng-container *ngIf="isMarkedAsFavorite(job)" >
+            <app-snack-job [job]="job" [showStar]="false"/>
+          </ng-container>
+        </ng-container>
+      </ng-container>
+    </div>
+
   `,
   styles: `
-    :host {
+    .container {
       display: flex;
       flex-direction: column;
-      gap: 30px;
+      gap: 24px;
       padding: 50px;
+      max-width: 1200px;
     }
   `
 })
