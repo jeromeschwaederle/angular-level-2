@@ -4,7 +4,7 @@
     <img ngSrc="{{job.companyLogo}}" alt="logo of {{job.companyName}}" width="60" height="60">
 
     <div class="snack-job-text-container">
-      <p class="snack-job-title">{{job.title}}</p>
+      <a [routerLink]="['/jobs', job.id]" class="snack-job-title">{{job.title}}</a>
       <div class="snack-job-text">
         <p>{{job.companyName}}</p>
         <p>Reference: {{job.reference}}</p>

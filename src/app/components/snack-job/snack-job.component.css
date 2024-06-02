@@ -57,3 +57,7 @@ p {
 .active {
   color: yellow;
 }
+
+a, a:hover, a:focus {
+  color: white;
+}
