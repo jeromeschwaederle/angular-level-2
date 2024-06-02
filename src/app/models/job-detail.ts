@@ -5,8 +5,8 @@ export type JobDetail = {
   "companyLogo": string;
   "reference": string;
   "location": string;
-  "industries": string[];
-  "types": string[];
+  "industries": string;
+  "types": string;
   "description": string;
   "publishDate": string;
 }

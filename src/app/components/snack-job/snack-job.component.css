@@ -6,10 +6,10 @@
 
 .snack-job-img-txt {
   display: flex;
+  gap: 25px;
 }
 
 .snack-job-text-container {
-  margin-left: 40px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;

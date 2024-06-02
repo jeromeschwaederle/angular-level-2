@@ -24,7 +24,7 @@ import { DatePipe, Location, NgIf, NgOptimizedImage } from "@angular/common";
       <p><strong>Location: </strong>{{ jobDetails.location }}</p>
       <p><strong>Reference: </strong>{{ jobDetails.reference }}</p>
       <p><strong>Description:</strong></p>
-      <div [innerHTML]="jobDetails.description"></div>
+      <div class="description-content" [innerHTML]="jobDetails.description"></div>
     </ng-container>
   `,
   styles: `
@@ -36,6 +36,9 @@ import { DatePipe, Location, NgIf, NgOptimizedImage } from "@angular/common";
     }
     .title {
       font-size: 32px;
+    }
+    .description-content {
+      padding: 0 40px;
     }
   `
 })
